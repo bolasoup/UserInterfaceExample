@@ -4,7 +4,7 @@
 //
 //  Created by Eric Larson on 9/2/20.
 //  Copyright © 2020 Eric Larson. All rights reserved.
-//
+//  bola was here
 
 #import "ImageModel.h"
 
@@ -25,7 +25,7 @@
     if(!_imageNames)
         _imageNames = @[@"Bill",@"Eric",@"Jeff"];
     
-    return _imageNames;
+    return _imageNames; 
 }
 
 

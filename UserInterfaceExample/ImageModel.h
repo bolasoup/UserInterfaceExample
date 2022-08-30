@@ -18,7 +18,6 @@ NS_ASSUME_NONNULL_BEGIN
 -(UIImage*)getImageWithName:(NSString*)name;
 
 @property (strong, nonatomic) NSArray* imageNames;
-
 @end
 
 NS_ASSUME_NONNULL_END
