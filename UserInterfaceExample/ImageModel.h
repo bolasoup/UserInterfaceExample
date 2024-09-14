@@ -17,6 +17,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(UIImage*)getImageWithName:(NSString*)name;
 
+-(UIImage*)getImageWithIndex:(NSInteger)index;
+
+-(NSInteger)numberOfImages;
+
+-(NSString*)getImageNameForIndex:(NSInteger)index;
+
 @end
 
 NS_ASSUME_NONNULL_END
