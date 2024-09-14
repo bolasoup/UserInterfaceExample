@@ -3,17 +3,18 @@
 //  UserInterfaceExample
 //
 //  Created by Eric Larson on 9/2/20.
-//  Copyright © 2020 Eric Larson. All rights reserved.
+//  Copyright © 2020 Eric Larson. All rights reservekld.
 //  bola was here
+//  Travis was here
 
 //Cady was here
 
 #import "ImageModel.h"
 @interface ImageModel ()
 
--(UIImage*)getImageWithName:(NSString*)name;
-
 @property (strong, nonatomic) NSArray* imageNames;
+
+@property (strong, nonatomic) NSDictionary* imagesDict;
 
 @end
 
@@ -39,11 +40,40 @@
 
 
 -(UIImage*)getImageWithName:(NSString*)name{
-    UIImage* image = nil;
     
-    image = [UIImage imageNamed:name];
+    return self.imagesDict[name];
     
-    return image;
+//    UIImage* image = nil;
+//
+//    image = [UIImage imageNamed:name];
+//
+//    return image;
+}
+
+-(NSDictionary*)imagesDict{
+    
+    if(!_imagesDict){
+        _imagesDict = @{
+            @"Bill": [UIImage imageNamed:@"Bill"],
+            @"Eric": [UIImage imageNamed:@"Eric"],
+            @"Jeff": [UIImage imageNamed:@"Jeff"]
+        };
+    }
+    
+    return _imagesDict;
+}
+
+-(UIImage*)getImageWithIndex:(NSInteger)index{
+    //nameForImage = _getImageNameForIndex[index];
+    return self.imagesDict[self.imageNames[index]];
+}
+
+-(NSInteger)numberOfImages{
+    return [self.imageNames count];
+}
+
+-(NSString*)getImageNameForIndex:(NSInteger)index{
+    return self.imageNames[index];
 }
 
 @end
