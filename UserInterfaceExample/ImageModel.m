@@ -6,7 +6,16 @@
 //  Copyright © 2020 Eric Larson. All rights reserved.
 //  bola was here
 
+//Cady was here
+
 #import "ImageModel.h"
+@interface ImageModel ()
+
+-(UIImage*)getImageWithName:(NSString*)name;
+
+@property (strong, nonatomic) NSArray* imageNames;
+
+@end
 
 @implementation ImageModel
 @synthesize imageNames = _imageNames;
