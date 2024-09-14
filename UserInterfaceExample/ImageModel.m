@@ -3,10 +3,18 @@
 //  UserInterfaceExample
 //
 //  Created by Eric Larson on 9/2/20.
-//  Copyright © 2020 Eric Larson. All rights reserved.
+//  Copyright © 2020 Eric Larson. All rights reservekld.
 //  bola was here
+//  Travis was here
 
 #import "ImageModel.h"
+@interface ImageModel ()
+
+-(UIImage*)getImageWithName:(NSString*)name;
+
+@property (strong, nonatomic) NSArray* imageNames;
+
+@end
 
 @implementation ImageModel
 @synthesize imageNames = _imageNames;
