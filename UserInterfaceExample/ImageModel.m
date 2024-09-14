@@ -9,9 +9,9 @@
 #import "ImageModel.h"
 @interface ImageModel ()
 
--(UIImage*)getImageWithName:(NSString*)name;
-
 @property (strong, nonatomic) NSArray* imageNames;
+
+@property (strong, nonatomic) NSDictionary* imagesDict;
 
 @end
 
@@ -37,11 +37,27 @@
 
 
 -(UIImage*)getImageWithName:(NSString*)name{
-    UIImage* image = nil;
     
-    image = [UIImage imageNamed:name];
+    return self.imagesDict[name];
     
-    return image;
+//    UIImage* image = nil;
+//
+//    image = [UIImage imageNamed:name];
+//
+//    return image;
+}
+
+-(NSDictionary*)imagesDict{
+    
+    if(!_imagesDict){
+        _imagesDict = @{
+            @"Bill": [UIImage imageNamed:@"Bill"],
+            @"Eric": [UIImage imageNamed:@"Eric"],
+            @"Jeff": [UIImage imageNamed:@"Jeff"]
+        };
+    }
+    
+    return _imagesDict;
 }
 
 @end
