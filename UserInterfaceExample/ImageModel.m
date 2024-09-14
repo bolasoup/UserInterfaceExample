@@ -33,7 +33,7 @@
 
 -(NSArray*) imageNames{
     if(!_imageNames)
-        _imageNames = @[@"Bill",@"Eric",@"Jeff"];
+        _imageNames = @[@"Bill",@"Eric",@"Jeff", @"Giraffe", @"Alligator", @"Elephant"];
     
     return _imageNames; 
 }
