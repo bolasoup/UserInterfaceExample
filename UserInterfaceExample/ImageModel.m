@@ -56,11 +56,27 @@
         _imagesDict = @{
             @"Bill": [UIImage imageNamed:@"Bill"],
             @"Eric": [UIImage imageNamed:@"Eric"],
-            @"Jeff": [UIImage imageNamed:@"Jeff"]
+            @"Jeff": [UIImage imageNamed:@"Jeff"],
+            @"Giraffe": [UIImage imageNamed:@"Giraffe"],
+            @"Alligator": [UIImage imageNamed:@"Alligator"],
+            @"Elephant": [UIIm imageNamed:@"Elephant"]
         };
     }
     
     return _imagesDict;
+}
+
+-(UIImage*)getImageWithIndex:(NSInteger)index{
+    //nameForImage = _getImageNameForIndex[index];
+    return self.imagesDict[self.imageNames[index]];
+}
+
+-(NSInteger)numberOfImages{
+    return [self.imageNames count];
+}
+
+-(NSString*)getImageNameForIndex:(NSInteger)index{
+    return self.imageNames[index];
 }
 
 @end
