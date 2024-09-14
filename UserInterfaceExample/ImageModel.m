@@ -7,6 +7,13 @@
 //  bola was here
 
 #import "ImageModel.h"
+@interface ImageModel ()
+
+-(UIImage*)getImageWithName:(NSString*)name;
+
+@property (strong, nonatomic) NSArray* imageNames;
+
+@end
 
 @implementation ImageModel
 @synthesize imageNames = _imageNames;
