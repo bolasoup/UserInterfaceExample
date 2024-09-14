@@ -59,7 +59,7 @@
             @"Jeff": [UIImage imageNamed:@"Jeff"],
             @"Giraffe": [UIImage imageNamed:@"Giraffe"],
             @"Alligator": [UIImage imageNamed:@"Alligator"],
-            @"Elephant": [UIIm imageNamed:@"Elephant"]
+            @"Elephant": [UIImage imageNamed:@"Elephant"]
         };
     }
     
