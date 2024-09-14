@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 +(ImageModel*)sharedInstance;
 
+-(UIImage*)getImageWithName:(NSString*)name;
+
 @end
 
 NS_ASSUME_NONNULL_END
