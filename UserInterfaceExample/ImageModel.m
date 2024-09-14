@@ -7,6 +7,13 @@
 //  bola was here
 
 #import "ImageModel.h"
+@interface ImageModel ()
+
+@property (strong, nonatomic) NSArray* imageNames;
+
+@property (strong, nonatomic) NSDictionary* imagesDict;
+
+@end
 
 @implementation ImageModel
 @synthesize imageNames = _imageNames;
@@ -30,11 +37,27 @@
 
 
 -(UIImage*)getImageWithName:(NSString*)name{
-    UIImage* image = nil;
     
-    image = [UIImage imageNamed:name];
+    return self.imagesDict[name];
     
-    return image;
+//    UIImage* image = nil;
+//
+//    image = [UIImage imageNamed:name];
+//
+//    return image;
+}
+
+-(NSDictionary*)imagesDict{
+    
+    if(!_imagesDict){
+        _imagesDict = @{
+            @"Bill": [UIImage imageNamed:@"Bill"],
+            @"Eric": [UIImage imageNamed:@"Eric"],
+            @"Jeff": [UIImage imageNamed:@"Jeff"]
+        };
+    }
+    
+    return _imagesDict;
 }
 
 @end
